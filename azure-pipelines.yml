@@ -14,11 +14,11 @@ steps:
 
   - script: |
       npm install
-      npm run build
+      npm run build   # Ensure this matches the script name in your package.json
     displayName: 'Install dependencies and build'
 
   - task: PublishBuildArtifacts@1
     inputs:
-      pathtoPublish: '$(System.DefaultWorkingDirectory)/build'
-      artifactName: 'frontend-artifact'
+      pathtoPublish: '$(System.DefaultWorkingDirectory)/backend/build'  # Adjust path to match your build output
+      artifactName: 'backend-artifact'
     displayName: 'Publish Artifact'
