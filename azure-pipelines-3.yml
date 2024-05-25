@@ -19,6 +19,6 @@ steps:
 
   - task: PublishBuildArtifacts@1
     inputs:
-      pathtoPublish: '$(System.DefaultWorkingDirectory)/build'
+      pathtoPublish: '$(System.DefaultWorkingDirectory)/backend'  # Adjust path to match your build output
       artifactName: 'backend-artifact'
     displayName: 'Publish Artifact'
